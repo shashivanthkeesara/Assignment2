@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Frog Leaping program</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+		div1{	position: absolute;
+				z-index: 1;
+				width: 99%;
+			  	height: 100px;
+				background-color: blue;
+				box-shadow:1px 4px 5px #888888;
+		}
+		
+		div2{	
+		font-size:16px;
+		position: fixed;
+		margin-top: 300px;
+		margin-left: 320px;    
+		color: blue;
+		}	
+	</style>
+	
+	<script>
+		
+	$(document).ready(function(){ 
+	    $("#butclk .btn").click(function(){
+	        $(this).button('loading').delay(2000).queue(function(){
+	            $(this).button('reset');
+	            $(this).dequeue();
+	        });        
+	    });
+	}); 
+	
+	</script>
+	
+  </head>
+  <body>
+		
+	<div1>
+		<marquee behavior="alternate"><h1 style="color:white"> Frog Leaping Program </h1></marquee>
+	</div1>  
+  	
+ 
+	
+	<div id="Demo-BS" style="padding:30px;">
+	 <button type="button" class="btn btn-primary">Loading State</button>
+	</div>
+		
+	<div2 id="txt> <p id="textDis1"> </p> </div2>
+  	
+	
+	<div class="container" id="butclk">
+		<p style="position:absolute;top: 150px;right: 16px;font-size:20px;">
+			<img src="sharingHand.gif" class="img-responsive" alt="Cinque Terre" style="width:35px;height:35px;"></img>
+			Share on: 
+			<img src="faceBook.png" class="img-responsive" alt="Cinque Terre" style="width:25px;height:25px;"></img>
+			<img src="Bird_Twit.png" class="img-responsive" alt="Cinque Terre" style="width:25px;height:25px;"></img>
+		</p>
+		<button type="button" class="btn btn-primary">Lets Leap</button>
+		<div2 id="txt> <p id="textDis1"> Frog will be able to leap to destination </p> </div2>
+		<img src="frog.gif" class="img-responsive" alt="Cinque Terre"></img>
+
+	</div>
+		
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
